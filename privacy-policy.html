@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Count Your Cash</title>
+  <meta name="description" content="Privacy Policy for Count Your Cash – Cash Counter Pro Android app." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0D1117;
+      color: #E6EDF3;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0E7FE0 0%, #0A5BA8 50%, #06407A 100%);
+      padding: 60px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+    }
+    .hero-icon {
+      font-size: 52px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero .app-name {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero .updated {
+      font-size: 13px;
+      opacity: 0.75;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .summary-box {
+      background: linear-gradient(135deg, rgba(14,127,224,0.15), rgba(14,127,224,0.05));
+      border: 1px solid rgba(14,127,224,0.3);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .summary-box h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #5BB8FF;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .summary-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .summary-item .icon { font-size: 20px; flex-shrink: 0; }
+    .summary-item strong { color: #E6EDF3; font-weight: 600; }
+
+    .section {
+      margin-bottom: 36px;
+      border-radius: 16px;
+      background: #161B22;
+      border: 1px solid #30363D;
+      overflow: hidden;
+    }
+    .section-header {
+      background: linear-gradient(90deg, rgba(14,127,224,0.12), transparent);
+      padding: 18px 24px;
+      border-bottom: 1px solid #30363D;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-header .num {
+      background: #0E7FE0;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #E6EDF3;
+    }
+    .section-body {
+      padding: 20px 24px;
+      font-size: 14.5px;
+      color: #8B949E;
+    }
+    .section-body p { margin-bottom: 12px; }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-body strong { color: #E6EDF3; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tag {
+      background: rgba(76,175,80,0.12);
+      border: 1px solid rgba(76,175,80,0.3);
+      color: #4CAF50;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .tag.orange {
+      background: rgba(255,152,0,0.12);
+      border-color: rgba(255,152,0,0.3);
+      color: #FF9800;
+    }
+    .tag.blue {
+      background: rgba(14,127,224,0.12);
+      border-color: rgba(14,127,224,0.3);
+      color: #5BB8FF;
+    }
+    .tag.red {
+      background: rgba(244,67,54,0.12);
+      border-color: rgba(244,67,54,0.3);
+      color: #F44336;
+    }
+
+    .highlight-box {
+      background: rgba(76,175,80,0.08);
+      border-left: 4px solid #4CAF50;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #8B949E;
+    }
+    .highlight-box.warn {
+      background: rgba(255,152,0,0.08);
+      border-color: #FF9800;
+    }
+    .highlight-box strong { color: #E6EDF3; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 14.5px;
+      color: #8B949E;
+    }
+    ul li::before {
+      content: '→';
+      color: #0E7FE0;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #161B22, #0D1117);
+      border: 1px solid #30363D;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #E6EDF3;
+    }
+    .contact-card p { color: #8B949E; font-size: 14px; margin-bottom: 12px; }
+    .contact-card a {
+      color: #0E7FE0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #21262D;
+      color: #8B949E;
+      font-size: 13px;
+    }
+    .footer a { color: #5BB8FF; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 16px 30px; }
+      .container { padding: 24px 16px 60px; }
+      .section-body, .section-header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-icon">🔒</span>
+    <div class="app-name">COUNT YOUR CASH – CASH COUNTER PRO</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 2026 &nbsp;·&nbsp; Effective immediately</p>
+  </div>
+
+  <div class="container">
+
+    <!-- Quick Summary -->
+    <div class="summary-box">
+      <h2>⚡ Quick Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="icon">📵</span>
+          <div><strong>No internet required</strong><br/>App works fully offline</div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">👤</span>
+          <div><strong>No personal data</strong><br/>No name, email, phone collected</div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">📱</span>
+          <div><strong>Local storage only</strong><br/>Data stays on your device</div>
+        </div>
+        <div class="summary-item">
+          <span class="icon">🚫</span>
+          <div><strong>Never sold</strong><br/>We don't sell any data</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">1</div>
+        <h2>Introduction</h2>
+      </div>
+      <div class="section-body">
+        <p>Welcome to <strong>Count Your Cash – Cash Counter Pro</strong> ("the App"). This Privacy Policy explains how we handle information when you use our application available on the Google Play Store.</p>
+        <p>We are committed to protecting your privacy. This policy is written in plain language so you understand exactly what happens with your data.</p>
+        <div class="highlight-box">
+          <strong>Simple answer:</strong> The App does not collect, transmit, or share any personal information. All your cash tally data is stored locally on your device only.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">2</div>
+        <h2>Information We Collect</h2>
+      </div>
+      <div class="section-body">
+        <p><strong>We do NOT collect:</strong></p>
+        <div class="tag-row">
+          <span class="tag red">✗ Name or Email</span>
+          <span class="tag red">✗ Phone Number</span>
+          <span class="tag red">✗ Location Data</span>
+          <span class="tag red">✗ Bank Details</span>
+          <span class="tag red">✗ Account Information</span>
+          <span class="tag red">✗ Biometric Data</span>
+          <span class="tag red">✗ Contacts</span>
+          <span class="tag red">✗ Camera Access</span>
+        </div>
+        <p style="margin-top:16px;"><strong>What is stored locally on your device:</strong></p>
+        <ul>
+          <li>Your cash denomination counts and totals (Notes &amp; Coins entries)</li>
+          <li>Your saved tally history (dates and totals only)</li>
+          <li>Your preferred app theme (Dark / Light mode)</li>
+        </ul>
+        <div class="highlight-box">
+          This data never leaves your device. It is stored using Android's secure local storage (AsyncStorage) and is not accessible to us or any third party.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">3</div>
+        <h2>Third-Party Advertising (Google AdMob)</h2>
+      </div>
+      <div class="section-body">
+        <p>The App displays advertisements provided by <strong>Google AdMob</strong>. Google may collect certain information to serve relevant ads. This is standard practice for free apps.</p>
+        <p><strong>What Google AdMob may collect:</strong></p>
+        <ul>
+          <li>Advertising ID (Android Ad ID) – used to show relevant ads</li>
+          <li>Approximate location (based on IP address)</li>
+          <li>Device information (model, OS version)</li>
+          <li>Ad interaction data (clicks, impressions)</li>
+        </ul>
+        <div class="highlight-box warn">
+          <strong>Note:</strong> We have configured AdMob to request <strong>non-personalized ads</strong> by default (<code>requestNonPersonalizedAdsOnly: true</code>), which limits the data Google uses for ad targeting.
+        </div>
+        <p>You can review Google's Privacy Policy here: <a href="https://policies.google.com/privacy" target="_blank" style="color:#5BB8FF;">policies.google.com/privacy</a></p>
+        <p>You can opt out of personalized ads via your Android device settings: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong></p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">4</div>
+        <h2>App Permissions Explained</h2>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li><strong>INTERNET</strong> — Required only for Google AdMob to load advertisements. Your cash data is never sent over the internet.</li>
+          <li><strong>READ_MEDIA_IMAGES / WRITE_EXTERNAL_STORAGE</strong> — Required only when you choose to save your receipt image to your gallery. The app only saves the image you explicitly request to save.</li>
+          <li><strong>ACCESS_NETWORK_STATE</strong> — Used by AdMob to check if network is available before loading ads.</li>
+        </ul>
+        <div class="highlight-box">
+          No other permissions are requested. We follow the principle of least privilege — only the minimum permissions needed for the app to function.
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">5</div>
+        <h2>Data Security</h2>
+      </div>
+      <div class="section-body">
+        <p>Your tally data is stored using Android's local storage (AsyncStorage). To protect your data:</p>
+        <ul>
+          <li>We have disabled Android backup (<code>allowBackup: false</code>), so your data cannot be extracted via ADB backup tools</li>
+          <li>No data is transmitted to any server — ever</li>
+          <li>We have no database, no backend, no cloud storage</li>
+          <li>HTTPS-only enforced for all network communication (ads only)</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">✓ Offline-first</span>
+          <span class="tag">✓ No server</span>
+          <span class="tag">✓ Backup disabled</span>
+          <span class="tag blue">✓ HTTPS enforced</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">6</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <div class="section-body">
+        <p>The App is not directed to children under 13 years of age. We do not knowingly collect any information from children. The App is a financial utility tool intended for general adult use.</p>
+        <p>Since we collect no personal information from any user, children's data is equally protected — nothing is collected from any age group.</p>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">7</div>
+        <h2>Data Deletion</h2>
+      </div>
+      <div class="section-body">
+        <p>Since all data is stored locally on your device, you have full control:</p>
+        <ul>
+          <li>Clear your tally history anytime from within the app using <strong>"Clear All History"</strong></li>
+          <li>Uninstalling the App automatically deletes all locally stored data</li>
+          <li>No data exists on any server — there is nothing for us to delete on our end</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="num">8</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <div class="section-body">
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with a new "Last updated" date. Continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
+        <p>We will not reduce your rights under this Privacy Policy without your explicit consent.</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h3>📬 Questions? Contact Us</h3>
+      <p>If you have any questions about this Privacy Policy or how your data is handled, please reach out:</p>
+      <p>
+        Support: <a href="https://github.com/vipinmishra122322-oss/privacy-policy/issues" target="_blank">GitHub Support &amp; Issues</a><br/>
+        App: Count Your Cash – Cash Counter Pro<br/>
+        Package: com.cashcounter.pro
+      </p>
+      <p style="margin-top:12px; font-size:13px; color:#6B737E;">We aim to respond within 3 business days.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Count Your Cash – Cash Counter Pro &nbsp;·&nbsp; <a href="terms.html">Terms &amp; Conditions</a></p>
+    <p style="margin-top:6px;">This app is not a financial advisor. Use for reference only.</p>
+  </div>
+
+</body>
+</html>

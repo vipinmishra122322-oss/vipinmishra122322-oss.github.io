@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Count Your Cash – Cash Counter Pro</title>
+  <meta name="description" content="Official Developer Website for Count Your Cash – Cash Counter Pro Android app (com.cashcounter.pro)." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0D1117;
+      color: #E6EDF3;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0E7FE0 0%, #0A5BA8 50%, #06407A 100%);
+      padding: 64px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-icon {
+      font-size: 52px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .hero .app-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-primary {
+      background: #FFFFFF;
+      color: #0A5BA8;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.15);
+      color: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      border-radius: 16px;
+      background: #161B22;
+      border: 1px solid #30363D;
+      overflow: hidden;
+    }
+    .section-header {
+      padding: 18px 24px;
+      background: #1F242C;
+      border-bottom: 1px solid #30363D;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E6EDF3;
+    }
+    .section-body {
+      padding: 24px;
+      color: #C9D1D9;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: #0D1117;
+      border: 1px solid #30363D;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #5BB8FF;
+      margin-bottom: 6px;
+    }
+    .feature-card p {
+      font-size: 13.5px;
+      color: #8B949E;
+      line-height: 1.5;
+    }
+
+    .links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .links-list a {
+      color: #5BB8FF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .links-list a:hover { text-decoration: underline; }
+
+    .contact-card {
+      background: linear-gradient(135deg, #161B22, #0D1117);
+      border: 1px solid #30363D;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #E6EDF3;
+    }
+    .contact-card p { color: #8B949E; font-size: 14px; margin-bottom: 10px; }
+    .contact-card a {
+      color: #5BB8FF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #21262D;
+      color: #8B949E;
+      font-size: 13px;
+    }
+    .footer a { color: #5BB8FF; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 44px 16px 32px; }
+      .container { padding: 24px 16px 60px; }
+      .section-body, .section-header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-content">
+      <span class="hero-icon">💵</span>
+      <div class="app-badge">Official Developer Website</div>
+      <h1>Count Your Cash – Cash Counter Pro</h1>
+      <p>Fast, accurate, offline-first Indian currency note &amp; coin counter for shops, businesses, cashiers, and daily personal cash tallying.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.cashcounter.pro" target="_blank" rel="noopener">Get it on Google Play</a>
+        <a class="btn btn-secondary" href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <div class="section-header">
+        <span>✨</span>
+        <h2>Key Features</h2>
+      </div>
+      <div class="section-body">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Note &amp; Coin Tally</h3>
+            <p>Instant calculation across Indian Rupee denominations (₹500 down to ₹1) with automatic total in words.</p>
+          </div>
+          <div class="feature-card">
+            <h3>GST &amp; Interest Tools</h3>
+            <p>Built-in GST Calculator (Add/Remove) and Simple &amp; Compound Interest calculators ready inside More Options.</p>
+          </div>
+          <div class="feature-card">
+            <h3>History &amp; Receipts</h3>
+            <p>Save daily tallies locally on your device and export clean receipt images to share anytime.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Offline &amp; Private</h3>
+            <p>Your financial counts stay 100% on your own device — zero account sign-up and zero cloud collection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>📋</span>
+        <h2>App &amp; Legal Information</h2>
+      </div>
+      <div class="section-body">
+        <ul class="links-list">
+          <li><strong>Package Name:</strong> <code>com.cashcounter.pro</code></li>
+          <li><strong>Privacy Policy:</strong> <a href="privacy-policy.html">Read Privacy Policy</a></li>
+          <li><strong>Terms &amp; Conditions:</strong> <a href="terms.html">Read Terms &amp; Conditions</a></li>
+          <li><strong>Ad Authorization:</strong> <a href="app-ads.txt">app-ads.txt</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>📬 Support &amp; Contact</h3>
+      <p>Need help, found a bug, or have a feature suggestion for Count Your Cash – Cash Counter Pro?</p>
+      <p>
+        Support Portal: <a href="https://github.com/vipinmishra122322-oss/privacy-policy/issues" target="_blank" rel="noopener">GitHub Support &amp; Issues</a><br />
+        Developer: Vipin Mishra
+      </p>
+      <p style="margin-top:10px; font-size:13px; color:#6B737E;">We aim to respond within 3 business days.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Count Your Cash – Cash Counter Pro &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms &amp; Conditions</a></p>
+  </div>
+
+</body>
+</html>
